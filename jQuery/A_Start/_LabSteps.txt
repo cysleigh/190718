@@ -5,7 +5,7 @@
 
 
 2. 	點按 Download，閱讀網頁說明。
-
+    https://code.jquery.com/jquery-3.4.1.min.js
 
 3. 	試著下載其中一個版本的 jQuery 檔案
 	<Note> 本資料夾的 jquery.js，即是循上述步驟下載回來的

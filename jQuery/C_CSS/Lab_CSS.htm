@@ -8,15 +8,25 @@
             $("#btnTry").click(function () {
                 // 在這裏寫程式
                 
+                // $("#report").css("font-size","3em");
+                //   .css("font-style","italic");                
                 
-                
-                
+                $("#report").css({
+                  "font-size": "2em",
+                  "font-style": "italic"
+                })
+
+                //$("#betaRibbon").addClass("beta-ribbon");     //加入樣式
+                //$("#betaRibbon").removeClass("beta-ribbon"); //切回原樣式
+                $("#betaRibbon").toggleClass("beta-ribbon"); //加入,切回樣式
+                //$("#betaRibbon").css("font-family", "Arial");
+                $("#betaRibbon").css({"font-family": "Arial", "font-size": "1.2em"});
                 
                 
             })
         });
     </script>
-
+ <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
 

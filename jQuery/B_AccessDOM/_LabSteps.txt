@@ -6,7 +6,7 @@
 	(此外，請留意 $(xxx) 裏頭 xxx 的語法，完全就跟之前 CSS 教的 Selector 一模一樣。)
 
 
-// 210:
+// 210:解析問題
                 $("#report").text("line1<br>Line2");
 
 
@@ -18,7 +18,7 @@
                 $("#report").append("line1<br>Line2");
 
 
-// 240:
+// 240:資料吐出來
                 var s = $("#report").text();
 				alert(s);
 				// 與 210 相較，有何差別?
@@ -29,12 +29,12 @@
                 $("#report").append(s);
 
 
-// 260
+// 260 
                 var s = $("#aTextField").attr("value", "Hello!");
 				// 一樣是 $.attr(), 250 與 260 差別在哪?
 
 
-// 270
+// 270 attr 切換不回去
                 var s = $("input[name='radioGroup']").eq(2).attr("checked", "checked");
                 $("#report").append("radio C selected.");
 				<Note> attr() 改用 prop() 代替，有何分別?
