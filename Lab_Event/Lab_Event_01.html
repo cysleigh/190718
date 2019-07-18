@@ -19,7 +19,7 @@
 		-moz-box-shadow: 0 1px 5px #333;
 		-webkit-box-shadow: 0 1px 5px #333;
 		z-index: 101;
-		transition: all 3s ease-out;
+		transition: all 1s ease-out;
 	}
 
 	.box h1 {
@@ -59,19 +59,23 @@
 
 	<script>
 	
-	function doAnimateShow(){
-		document.getElementById("box").style.left = event.clientX + "px";
-		document.getElementById("box").style.top = event.clientY + "px";
-		//document.getElementById("box").style.top="200px";
-	}
+		function doAnimateShow(){
+			document.getElementById("box").style.left = event.clientX + "px";
+			document.getElementById("box").style.top = event.clientY + "px";
+			//document.getElementById("box").style.top="200px";
+		}
 
-	function doAnimateHide(){
-		document.getElementById("box").style.top="-200px";
-		event.cancelBubble = true;
-	}
+		function doAnimateHide(e){
+			document.getElementById("box").style.top="-200px";
+			//event.cancelBubble = true;
+			e.stopPropagation();
+			//$("#box").css("top","-200px");
+			e.stopPropagation();
+		}
 
-		document.getElementById("boxclose").onclick = doAnimateHide;
-		document.onclick = doAnimateShow;
+			document.getElementById("boxclose").onclick = doAnimateHide;
+			document.onclick = doAnimateShow;
+
 	</script>
 
 </body>
